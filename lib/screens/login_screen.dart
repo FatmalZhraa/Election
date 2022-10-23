@@ -13,7 +13,6 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 class _LoginScreenState extends State<LoginScreen> {
-
   myformstate(){
     selectedname=userName[0];
   }
@@ -43,8 +42,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "UserName", style: TextStyle(color: Color(0xFF9B291F),),
-                      ),
+                        "UserName", style: TextStyle(color: Color(0xFF9B291F),),),
+
                       SizedBox(height: 60.h,width: 350.w,
 
                         child: DropdownButtonFormField(
@@ -58,13 +57,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                 separatorBuilder: (context, index) => SizedBox(
                                   height: 10.h,
                                 ),
-                                itemCount: cubit.position .length);
-                          },
+                                itemCount: cubit.position .length);},
+
                           icon: const Icon(
                             Icons.arrow_drop_down_circle,
-                            color: Color(0xFF9B291F)),
-                        ),
-                      ),
+                            color: Color(0xFF9B291F)),),),
                       SizedBox(
                         height: 10.h,
                       ),
@@ -75,8 +72,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         textInputType: TextInputType.visiblePassword,
                         controller: passwordController,
                         isPassword: true,
-                        maxLines: 1,
-                      ),
+                        maxLines: 1,),
+
                       SizedBox(
                         height: 20.h,
                       ),
@@ -86,8 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           if (state is LoginSuccessfulState) {
                             Navigator.push(context, new MaterialPageRoute(builder: (__) => new Election_Screen())
                             );
-                          }
-                        },
+                          }},
                         builder: (context, state) {
                           return (state is LoginLoadingState) ? const Center(
                             child: CircularProgressIndicator(),) :
